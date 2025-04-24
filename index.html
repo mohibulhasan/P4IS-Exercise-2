@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Test Page</title>
+        <script>
+                let c=()=>{
+                  let a=0;
+                  let b=document.getElementById('in').value;
+                  for (let i=1;i<b;i++){
+                    if (i%3===0 || i%5===0){
+                      a+=i;
+                    }
+                  }
+                  console.log(a)
+  
+                  document.getElementById('result').textContent = "The sum of multiples of 3 or 5 up to "+ b +" is: " + a;
+                }
+                
+        </script>
+    </head>
+    <body>
+      <p>Enter a number to find the sum of its multiples of 3 or 5:</p>
+      <input type="text" id="in">
+      <button onclick='c()'>Submit</button>
+      <p id="result"></p>
+    </body>
+</html>
